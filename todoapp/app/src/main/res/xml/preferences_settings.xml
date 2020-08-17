@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SwitchPreference
+        app:key="showUncompletedTasks"
+        app:title="Show Uncompleted Tasks"
+        app:defaultValue="false" />
+    <SwitchPreference
+        app:key="showCompletedTasks"
+        app:title="Show Completed Tasks"
+        app:defaultValue="false" />
+    <EditTextPreference
+        app:key="inspirationalQuote"
+        app:title="Show an inspirational quote"
+        app:summary="Be inspired everyday to complete your tasks!" />
+
+    <DropDownPreference
+        app:key="theme"
+        app:title="Change Theme"
+        app:summary="Change the theme of the app from light, dark, or auto"/>
+</PreferenceScreen>

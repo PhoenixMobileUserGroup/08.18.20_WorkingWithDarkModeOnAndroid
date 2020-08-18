@@ -31,6 +31,10 @@ class TodoAdapter(
         return todoItems.size
     }
 
+    override fun getItemViewType(position: Int): Int {
+        return 0
+    }
+
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
         val item = todoItems[position]
         if (!item.isCompleted) holder.title.text = item.title else holder.title.text = holder.itemView.context.getString(R.string.completed_task, item.title)

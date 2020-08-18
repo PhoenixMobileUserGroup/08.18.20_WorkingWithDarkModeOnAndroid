@@ -46,14 +46,14 @@ class AddTodoViewModel(application: Application) : AndroidViewModel(application)
         }
 
         val localDate = LocalDate.now()
-        isVerified = if (dueDate != null && dueDate.isBefore(localDate)) {
+        if (dueDate != null && dueDate.isBefore(localDate)) {
             viewStateData.value =
                 AddTodoViewState(R.string.error_due_date_invalid, AddTodoViewState.DUE_DATE, false)
-            false
-        } else {
+            isVerified = false
+        } else if (dueDate == null) {
             viewStateData.value =
                 AddTodoViewState(R.string.error_due_date_missing, AddTodoViewState.DUE_DATE, false)
-            false
+            isVerified = false
         }
         return isVerified
     }

@@ -33,4 +33,8 @@
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">italic</item>
     </style>
+
+<!--    <style name="MyImage">-->
+<!--        <item name="android:src">@drawable/ic_close</item>-->
+<!--    </style>-->
 </resources>
